@@ -2,10 +2,10 @@
 
 Contributors: quotepro
 Donate link: http://www.quotepro.com/
-Tags: widget, insurance, colorbox
+Tags: widget, insurance, colorbox, quotepro
 Requires at least: 3.3.1
-Tested up to: 3.8.1
-Stable tag: 1.0
+Tested up to: 4.2.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,7 @@ easy deployment and optimal experience for your customers and also your website 
 
 Quotepro works with many different insurance carriers to provide realtime comparison rates and the ability to purchase policies online. You may use our sample url for testing, with an Illinois zip code. When ready to go live, request a Retail Website account with us.
 
-= What nations and/or states can you quote =
+= What nations and/or states can you quote? =
 
 Currently, our Retail Website provides insurance rates in most of the continental United States. We can provide lead generation in all 50 states. For international users, please contact us to discuss your specific needs.
 
