@@ -70,6 +70,9 @@ Fees for a Retail Website account vary depending on a number of factors, includi
 = 1.0.2 =
 * Minor wording changes to Readme file, compatibility updates.
 
+= 1.1.0 =
+* Improvements to mobile website detection.
+
 == Upgrade Notice ==
 
 = 1.0 =
