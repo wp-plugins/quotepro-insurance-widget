@@ -5,7 +5,7 @@ Donate link: http://www.quotepro.com/
 Tags: widget, insurance, colorbox, quotepro
 Requires at least: 3.3.1
 Tested up to: 4.2.1
-Stable tag: 1.1.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,9 @@ Fees for a Retail Website account vary depending on a number of factors, includi
 
 = 1.1.0 =
 * Improvements to mobile website detection.
+
+= 2.0.0 =
+* Version number update, to ensure consistency with x.x.x version numbering going forward. No functional changes.
 
 == Upgrade Notice ==
 
