@@ -57,7 +57,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 		);
 
 		// Register admin styles and scripts
-		add_action( 'admin_print_styles', array( $this, 'register_admin_styles' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_styles' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_scripts' ) );
 
 		// Register site styles and scripts
@@ -236,8 +236,10 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	/**
 	 * Registers and enqueues admin-specific styles.
 	 */
-	public function register_admin_styles() {
-
+	public function register_admin_styles($hook) {
+	    if ( 'widget.php' != $hook ) {
+	        return;
+	    }
 		wp_enqueue_style( 'quotepro-insurance-widget-admin-styles', plugins_url( 'css/admin.css', __FILE__ ) );
 
 	} // end register_admin_styles
@@ -245,8 +247,10 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	/**
 	 * Registers and enqueues admin-specific JavaScript.
 	 */
-	public function register_admin_scripts() {
-
+	public function register_admin_scripts($hook) {
+	    if ( 'widget.php' != $hook ) {
+	        return;
+	    }
 		wp_enqueue_script( 'quotepro-insurance-widget-admin-script', plugins_url( 'js/admin.js', __FILE__ ), array('jquery') );
 
 	} // end register_admin_scripts
