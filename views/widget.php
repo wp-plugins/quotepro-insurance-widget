@@ -1,4 +1,4 @@
-<form class="quotepro-insurance-widget" action="<?php echo $url; ?>/<?php echo $lang; ?>/Home/Prefill">
+<form class="quotepro-insurance-widget" action="<?php echo esc_attr($url); ?>/<?php echo esc_attr($lang); ?>/Home/Prefill">
   	<?php 
 	if ( !empty( $title ) ) {
         echo $args['before_title'] . apply_filters( 'widget_title',  $title, $instance, $this->id_base ) . $args['after_title'];
