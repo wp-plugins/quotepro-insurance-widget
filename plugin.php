@@ -2,7 +2,7 @@
 /**
  * @wordpress-plugin
  * Plugin Name:       Quotepro Insurance Widget
- * Plugin URI:        http://aq3.processmyquote.com/Content/Widget
+ * Plugin URI:        https://github.com/quotepro/quotepro-insurance-widget
  * Description:       Plugin to add the ability to rate auto or cycle insurance from wordpress
  * Version:           2.0.1
  * Author:            Brian Marquis
@@ -11,7 +11,7 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /lang
- * GitHub Plugin URI: https://github.com/<owner>/<repo>
+ * GitHub Plugin URI: https://github.com/quotepro/quotepro-insurance-widget
  *
  * @package   Quotepro_Insurance_Widget
  * @author    Brian Marquis <brian@quotepro.com>
