@@ -76,6 +76,9 @@ Fees for a Retail Website account vary depending on a number of factors, includi
 = 2.0.0 =
 * Version number update, to ensure consistency with x.x.x version numbering going forward. No functional changes.
 
+= 2.0.1 =
+* Changes suggested by ThemeReview
+
 == Upgrade Notice ==
 
 = 1.0 =

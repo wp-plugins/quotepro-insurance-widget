@@ -1,20 +1,10 @@
 <?php
 /**
- * Quotepro Insurance Widget
- *
- * Add the ability to rate Auto and Motorcycle Insurance to your website using Quotepro's Insurance Plugin
- *
- * @package   Quotepro_Insurance_Widget
- * @author    Brian Marquis <brian@quotepro.com>
- * @license   GPL-2.0+
- * @link      http://www.quotepro.com
- * @copyright 2014 Quotepro Inc
- *
  * @wordpress-plugin
  * Plugin Name:       Quotepro Insurance Widget
  * Plugin URI:        http://aq3.processmyquote.com/Content/Widget
  * Description:       Plugin to add the ability to rate auto or cycle insurance from wordpress
- * Version:           2.0.0
+ * Version:           2.0.1
  * Author:            Brian Marquis
  * Author URI:        https://plus.google.com/u/1/104998013926973170131/posts
  * Text Domain:       quotepro-insurance-widget
@@ -22,13 +12,19 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /lang
  * GitHub Plugin URI: https://github.com/<owner>/<repo>
+ *
+ * @package   Quotepro_Insurance_Widget
+ * @author    Brian Marquis <brian@quotepro.com>
+ * @license   GPL-2.0+
+ * @link      http://www.quotepro.com
+ * @copyright 2014 Quotepro Inc
+ *
+ * Quotepro Insurance Widget
+ *
+ * Add the ability to rate Auto and Motorcycle Insurance to your website using Quotepro's Insurance Plugin
+ *
  */
  
- // Prevent direct file access
-if ( ! defined ( 'ABSPATH' ) ) {
-	exit;
-}
-
 class Quotepro_Insurance_Widget extends WP_Widget {
 
     protected $widget_slug = 'quotepro-insurance-widget';
@@ -44,7 +40,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	public function __construct() {
 
 		// load plugin text domain
-		add_action( 'init', array( $this, 'widget_textdomain' ) );
+		add_action( 'plugins_loaded', array( $this, 'widget_textdomain' ) );
 
 		// Hooks fired when the Widget is activated and deactivated
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -52,11 +48,11 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 
 		// TODO: update description
 		parent::__construct(
-			$this->get_widget_slug(),
-			__( 'Quotepro Insurance Widget', $this->get_widget_slug() ),
+			'quotepro-insurance-widget',
+			__( 'Quotepro Insurance Widget', 'quotepro-insurance-widget' ),
 			array(
-				'classname'  => $this->get_widget_slug().'-class',
-				'description' => __( 'Rate Auto and Motorcycle Insurance on your website', $this->get_widget_slug() )
+				'classname'  => 'quotepro-insurance-widget-class',
+				'description' => __( 'Rate Auto and Motorcycle Insurance on your website', 'quotepro-insurance-widget' )
 			)
 		);
 
@@ -101,7 +97,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 
 		
 		// Check if there is a cached output
-		$cache = wp_cache_get( $this->get_widget_slug(), 'widget' );
+		$cache = wp_cache_get( 'quotepro-insurance-widget', 'widget' );
 
 		if ( !is_array( $cache ) )
 			$cache = array();
@@ -133,7 +129,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 
 		$cache[ $args['widget_id'] ] = $widget_string;
 
-		wp_cache_set( $this->get_widget_slug(), $cache, 'widget' );
+		wp_cache_set( 'quotepro-insurance-widget', $cache, 'widget' );
 
 		print $widget_string;
 
@@ -142,7 +138,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	
 	public function flush_widget_cache() 
 	{
-    	wp_cache_delete( $this->get_widget_slug(), 'widget' );
+    	wp_cache_delete( 'quotepro-insurance-widget', 'widget' );
 	}
 	/**
 	 * Processes the widget's options to be saved.
@@ -156,7 +152,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 
 		$instance['title'] = !empty($new_instance['title']) ? strip_tags($new_instance['title']) : '';
 		$instance['aff'] = !empty($new_instance['aff']) ? strip_tags($new_instance['aff']) : '';
-		$instance['url'] = !empty($new_instance['url']) ? strip_tags($new_instance['url']) : 'https://aq3.processmyquote.com/PlainAgent';
+		$instance['url'] = !empty($new_instance['url']) ? esc_url_raw($new_instance['url']) : 'https://aq3.processmyquote.com/PlainAgent';
 		$instance['lang'] = !empty($new_instance['lang']) ? strip_tags($new_instance['lang']) : 'en';
 		$instance['auto'] = !empty($new_instance['auto']) ? true : false;
 		$instance['cycle'] = !empty($new_instance['cycle']) ? true : false;
@@ -215,8 +211,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	 */
 	public function widget_textdomain() {
 
-		// TODO be sure to change 'quotepro-insurance-widget' to the name of *your* plugin
-		load_plugin_textdomain( $this->get_widget_slug(), false, plugin_dir_path( __FILE__ ) . 'lang/' );
+		load_plugin_textdomain( 'quotepro-insurance-widget', false, plugin_dir_path( __FILE__ ) . 'lang/' );
 
 	} // end widget_textdomain
 
@@ -243,7 +238,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	 */
 	public function register_admin_styles() {
 
-		wp_enqueue_style( $this->get_widget_slug().'-admin-styles', plugins_url( 'css/admin.css', __FILE__ ) );
+		wp_enqueue_style( 'quotepro-insurance-widget-admin-styles', plugins_url( 'css/admin.css', __FILE__ ) );
 
 	} // end register_admin_styles
 
@@ -252,7 +247,7 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	 */
 	public function register_admin_scripts() {
 
-		wp_enqueue_script( $this->get_widget_slug().'-admin-script', plugins_url( 'js/admin.js', __FILE__ ), array('jquery') );
+		wp_enqueue_script( 'quotepro-insurance-widget-admin-script', plugins_url( 'js/admin.js', __FILE__ ), array('jquery') );
 
 	} // end register_admin_scripts
 
@@ -261,8 +256,8 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	 */
 	public function register_widget_styles() {
 
-		wp_enqueue_style( $this->get_widget_slug().'-colorbox-styles', plugins_url( 'css/colorbox.css', __FILE__ ) );
-		wp_enqueue_style( $this->get_widget_slug().'-widget-styles', plugins_url( 'css/widget.css', __FILE__ ) );
+		wp_enqueue_style( 'quotepro-insurance-widget-colorbox-styles', plugins_url( 'css/colorbox.css', __FILE__ ) );
+		wp_enqueue_style( 'quotepro-insurance-widget-widget-styles', plugins_url( 'css/widget.css', __FILE__ ) );
 
 	} // end register_widget_styles
 
@@ -271,12 +266,11 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	 */
 	public function register_widget_scripts() {
 
-		wp_enqueue_script( $this->get_widget_slug().'-colorbox-script', plugins_url( 'js/jquery.colorbox-min.js', __FILE__ ), array('jquery') );
-		wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'js/widget.js', __FILE__ ), array('jquery') );
+		wp_enqueue_script( 'quotepro-insurance-widget-colorbox-script', plugins_url( 'js/jquery.colorbox-min.js', __FILE__ ), array('jquery') );
+		wp_enqueue_script( 'quotepro-insurance-widget-script', plugins_url( 'js/widget.js', __FILE__ ), array('jquery') );
 
 	} // end register_widget_scripts
 
 } // end class
 
-// TODO: Remember to change 'Quotepro_Insurance_Widget' to match the class name definition
 add_action( 'widgets_init', create_function( '', 'register_widget("Quotepro_Insurance_Widget");' ) );
