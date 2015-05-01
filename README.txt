@@ -5,7 +5,7 @@ Donate link: http://www.quotepro.com/
 Tags: widget, insurance, colorbox, quotepro
 Requires at least: 3.3.1
 Tested up to: 4.2.1
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,8 +82,9 @@ Fees for a Retail Website account vary depending on a number of factors, includi
 = 2.0.2 =
 * Translated to Spanish
 
-== Upgrade Notice ==
+= 2.0.3 =
+* Fix for untranslated text in admin page
 
-= 1.0 =
-Provides base functionality including collection of applicant information, presentation of quotes and ability to purchase a policy.
+== Translations ==
 
+Our insurance widget currently supports English and Spanish
