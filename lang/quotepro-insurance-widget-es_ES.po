@@ -27,10 +27,6 @@ msgstr "Cotize seguro de Auto y motocicleta en su página web"
 msgid "Free Insurance Quote"
 msgstr "Presupuesto de seguro Gratis"
 
-#: plugin.php:172
-msgid "Request A Url"
-msgstr "Solicite una Url"
-
 #: plugin.php:184
 msgid "https://aq3.processmyquote.com/PlainAgent"
 msgstr "https://aq3.processmyquote.com/PlainAgent"
@@ -42,6 +38,10 @@ msgstr "Titulo"
 #: views/admin.php:7
 msgid "Quotepro Retail Website Url"
 msgstr "Quotepro Retail URL del web"
+
+#: views/admin.php:9
+msgid "Request A Url"
+msgstr "Solicite una Url"
 
 #: views/admin.php:13
 msgid "Affiliate Id (optional)"
