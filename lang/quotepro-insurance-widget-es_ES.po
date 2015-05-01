@@ -27,6 +27,10 @@ msgstr "Cotize seguro de Auto y motocicleta en su página web"
 msgid "Free Insurance Quote"
 msgstr "Presupuesto de seguro Gratis"
 
+#: plugin.php:172
+msgid "Request A Url"
+msgstr "Solicite una Url"
+
 #: plugin.php:184
 msgid "https://aq3.processmyquote.com/PlainAgent"
 msgstr "https://aq3.processmyquote.com/PlainAgent"
