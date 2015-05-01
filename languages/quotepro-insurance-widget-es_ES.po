@@ -1,0 +1,89 @@
+# Copyright (C) 2015 Quotepro Insurance Widget
+# This file is distributed under the same license as the Quotepro Insurance Widget package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Quotepro Insurance Widget 2.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/quotepro-insurance-"
+"widget\n"
+"POT-Creation-Date: 2015-05-01 19:33:46+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. #-#-#-#-#  plugin.pot (Quotepro Insurance Widget 2.0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: plugin.php:52
+msgid "Quotepro Insurance Widget"
+msgstr "Quotepro Widget de Seguros"
+
+#: plugin.php:55
+msgid "Rate Auto and Motorcycle Insurance on your website"
+msgstr "Cotize seguro de Auto y motocicleta en su página web"
+
+#: plugin.php:176
+msgid "Free Insurance Quote"
+msgstr "Presupuesto de seguro Gratis"
+
+#: plugin.php:184
+msgid "https://aq3.processmyquote.com/PlainAgent"
+msgstr "https://aq3.processmyquote.com/PlainAgent"
+
+#: views/admin.php:2
+msgid "Title"
+msgstr "Titulo"
+
+#: views/admin.php:7
+msgid "Quotepro Retail Website Url"
+msgstr "Quotepro Retail URL del web"
+
+#: views/admin.php:13
+msgid "Affiliate Id (optional)"
+msgstr "Id de Afiliado (opcional)"
+
+#: views/admin.php:18
+msgid "Language"
+msgstr "Idioma"
+
+#: views/admin.php:29
+msgid "Insurance Types"
+msgstr "Tipos de Seguros"
+
+#: views/widget.php:10
+msgid "Insurance Type"
+msgstr "Tipo de Seguros"
+
+#: views/widget.php:11
+msgid "Auto"
+msgstr "Auto"
+
+#: views/widget.php:12
+msgid "Motorcycle"
+msgstr "Motocicleta"
+
+#: views/widget.php:28
+msgid "Enter Zip Code"
+msgstr "Ingrese su Código Postal"
+
+#: views/widget.php:33
+msgid "GO &gt;"
+msgstr "IR &gt;"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/quotepro/quotepro-insurance-widget"
+msgstr "https://github.com/quotepro/quotepro-seguro-widget"
+
+#. Description of the plugin/theme
+msgid ""
+"Plugin to add the ability to rate auto or cycle insurance from wordpress"
+msgstr "Ingrese para agregar la capacidad de cotiza seguro de auto/motocicleta en wordpress"
+
+#. Author of the plugin/theme
+msgid "Brian Marquis"
+msgstr "Brian Marquis"
+
+#. Author URI of the plugin/theme
+msgid "https://plus.google.com/u/1/104998013926973170131/posts"
+msgstr "https://plus.google.com/u/1/104998013926973170131/posts"
