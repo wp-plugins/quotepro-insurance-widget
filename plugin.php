@@ -39,8 +39,6 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 
-		// load plugin text domain
-		add_action( 'init', array( $this, 'widget_textdomain' ) );
 
 		// Hooks fired when the Widget is activated and deactivated
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -206,27 +204,6 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	/* Public Functions
 	/*--------------------------------------------------*/
 
-	/**
-	 * Loads the Widget's text domain for localization and translation.
-	 */
-	public function widget_textdomain() {
-
-	$domain = 'quotepro-insurance-widget';
-	$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
-
-	if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
-		return $loaded;
-	} else {
-		load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/lang/' );
-	}
-		/*$path = plugin_dir_path( __FILE__ ) . 'lang/';
-		
-		//die( $path );
-		
-		$lang_loaded = load_plugin_textdomain( 'quotepro-insurance-widget', FALSE, $path );
-		! $lang_loaded and die( $path . ' not found' );
-*/
-	} // end widget_textdomain
 
 	/**
 	 * Fired when the plugin is activated.
@@ -289,5 +266,23 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 	} // end register_widget_scripts
 
 } // end class
+
+/**
+ * Loads the Widget's text domain for localization and translation.
+ */
+function widget_textdomain() {
+
+	$domain = 'quotepro-insurance-widget';
+	$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+	
+	if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
+		return $loaded;
+	} else {
+		load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/lang/' );
+	}
+}
+
+// load plugin text domain
+add_action( 'plugins_loaded', 'widget_textdomain' );
 
 add_action( 'widgets_init', create_function( '', 'register_widget("Quotepro_Insurance_Widget");' ) );
