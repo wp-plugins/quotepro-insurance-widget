@@ -1,0 +1,13 @@
+/* This stylesheet is used to style the public view of the widget. */
+.quotepro-insurance-widget .InsuranceType {
+	width: 100%;
+}
+
+.quotepro-insurance-widget .ZipCode {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.quotepro-insurance-widget .submit {
+	
+}

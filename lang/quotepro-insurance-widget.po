@@ -1,0 +1,89 @@
+# Copyright (C) 2015 Quotepro Insurance Widget
+# This file is distributed under the same license as the Quotepro Insurance Widget package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Quotepro Insurance Widget 2.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/quotepro-insurance-"
+"widget\n"
+"POT-Creation-Date: 2015-05-01 19:33:46+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. #-#-#-#-#  plugin.pot (Quotepro Insurance Widget 2.0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: plugin.php:52
+msgid "Quotepro Insurance Widget"
+msgstr ""
+
+#: plugin.php:55
+msgid "Rate Auto and Motorcycle Insurance on your website"
+msgstr ""
+
+#: plugin.php:176
+msgid "Free Insurance Quote"
+msgstr ""
+
+#: plugin.php:184
+msgid "https://aq3.processmyquote.com/PlainAgent"
+msgstr ""
+
+#: views/admin.php:2
+msgid "Title"
+msgstr ""
+
+#: views/admin.php:7
+msgid "Quotepro Retail Website Url"
+msgstr ""
+
+#: views/admin.php:13
+msgid "Affiliate Id (optional)"
+msgstr ""
+
+#: views/admin.php:18
+msgid "Language"
+msgstr ""
+
+#: views/admin.php:29
+msgid "Insurance Types"
+msgstr ""
+
+#: views/widget.php:10
+msgid "Insurance Type"
+msgstr ""
+
+#: views/widget.php:11
+msgid "Auto"
+msgstr ""
+
+#: views/widget.php:12
+msgid "Motorcycle"
+msgstr ""
+
+#: views/widget.php:28
+msgid "Enter Zip Code"
+msgstr ""
+
+#: views/widget.php:33
+msgid "GO &gt;"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/quotepro/quotepro-insurance-widget"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Plugin to add the ability to rate auto or cycle insurance from wordpress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Brian Marquis"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://plus.google.com/u/1/104998013926973170131/posts"
+msgstr ""
