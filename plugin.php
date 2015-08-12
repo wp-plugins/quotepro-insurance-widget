@@ -4,7 +4,7 @@
  * Plugin Name:       Quotepro Insurance Widget
  * Plugin URI:        https://github.com/quotepro/quotepro-insurance-widget
  * Description:       Plugin to add the ability to rate auto or cycle insurance from wordpress
- * Version:           2.0.5
+ * Version:           2.0.6
  * Author:            Brian Marquis
  * Author URI:        https://plus.google.com/u/1/104998013926973170131/posts
  * Text Domain:       quotepro-insurance-widget

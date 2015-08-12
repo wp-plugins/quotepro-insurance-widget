@@ -1,7 +1,14 @@
 (function ($) {
 	"use strict";
 	$(function () {
-	      $('form.quotepro-insurance-widget .qiw-colorbox').colorbox({iframe: true, top: 50, width: "90%",height: $(window).height()-100, close:"X"});
+		$(window).on("message", function(e) {
+		    var oe = e.originalEvent;
+		    if (!oe.origin.match(/.processmyquote.com/)) return;
+		    if (typeof oe.data == "string" && oe.data.indexOf("url:") == 0) {
+				document.location = oe.data.substr(4);
+            }
+		});
+	    $('form.quotepro-insurance-widget .qiw-colorbox').colorbox({iframe: true, top: 50, width: "90%",height: $(window).height()-100, close:"X"});
 		$('form.quotepro-insurance-widget').submit(function(e) {
                 var action = $(this).prop('action')+"?"+$(this).serialize();
 	    	if ( $(window).width() < 900 ) {
