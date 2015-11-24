@@ -4,7 +4,7 @@
  * Plugin Name:       Quotepro Insurance Widget
  * Plugin URI:        https://github.com/quotepro/quotepro-insurance-widget
  * Description:       Plugin to add the ability to rate auto or cycle insurance from wordpress
- * Version:           2.0.5
+ * Version:           2.0.7
  * Author:            Brian Marquis
  * Author URI:        https://plus.google.com/u/1/104998013926973170131/posts
  * Text Domain:       quotepro-insurance-widget
@@ -118,6 +118,8 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 		$lang= $instance['lang'];
 		$auto= $instance['auto'];
 		$cycle= $instance['cycle'];
+		$home= $instance['home'];
+		$mexico= $instance['mexico'];
 
 		ob_start();
 		include( plugin_dir_path( __FILE__ ) . 'views/widget.php' );
@@ -154,6 +156,8 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 		$instance['lang'] = !empty($new_instance['lang']) ? strip_tags($new_instance['lang']) : 'en';
 		$instance['auto'] = !empty($new_instance['auto']) ? true : false;
 		$instance['cycle'] = !empty($new_instance['cycle']) ? true : false;
+		$instance['home'] = !empty($new_instance['home']) ? true : false;
+		$instance['mexico'] = !empty($new_instance['mexico']) ? true : false ;
 
 
 		return $instance;
@@ -194,6 +198,14 @@ class Quotepro_Insurance_Widget extends WP_Widget {
 		$cycle = !empty($instance['cycle']) && $instance['cycle'] ? 'checked' : '';
 		$cycleId = $this->get_field_id( 'cycle' );
             $cycleName = $this->get_field_name( 'cycle' );
+
+		$home = !empty($instance['home']) && $instance['home'] ? 'checked' : '';
+		$homeId = $this->get_field_id( 'home' );
+        $homeName = $this->get_field_name( 'home' );
+
+		$mexico = !empty($instance['mexico']) && $instance['mexico'] ? 'checked' : '';
+		$mexicoId = $this->get_field_id( 'mexico' );
+            $mexicoName = $this->get_field_name( 'mexico' );
 
 		// Display the admin form
 		include( plugin_dir_path(__FILE__) . 'views/admin.php' );
