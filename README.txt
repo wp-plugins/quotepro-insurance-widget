@@ -94,6 +94,9 @@ Fees for a Retail Website account vary depending on a number of factors, includi
 = 2.0.6 =
 * Use a postMessage redirect to prevent referrer from opening inside the dialog when back button is pressed.
 
+= 2.0.7 =
+* Added Homeowners and Mexican insurance
+
 == Translations ==
 
 Our insurance widget currently supports English and Spanish
