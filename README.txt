@@ -4,8 +4,8 @@ Contributors: quotepro
 Donate link: http://www.quotepro.com/
 Tags: widget, insurance, colorbox, quotepro
 Requires at least: 3.3.1
-Tested up to: 4.2.3
-Stable tag: 2.0.6
+Tested up to: 4.3
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

@@ -26,13 +26,24 @@
 /> Espa&ntilde;ol
 </p>
 <p>
-<label><?php _e('Insurance Types','quotepro-insurance-widget'); ?></label>
+<label><?php _e('Insurance Types','quotepro-insurance-widget'); ?>:</label><br/>
 <input type="checkbox" id="<?php echo $autoId; ?>" 
        name="<?php echo $autoName; ?>" value="1"
        <?php echo $auto; ?>
-/> Auto
-<input type="checkbox" id="<?php echo $cycleId; ?>" 
+/> <?php _e('Auto','quotepro-insurance-widget') ?>
+
+<input type="checkbox" id="<?php echo $cycleId; ?>"
        name="<?php echo $cycleName; ?>" value="1"
        <?php echo $cycle; ?>
-/> Motorcycle
+/> <?php _e('Motorcycle','quotepro-insurance-widget') ?><br/>
+
+<input type="checkbox" id="<?php echo $homeId; ?>"
+       name="<?php echo $homeName; ?>" value="1"
+       <?php echo $home; ?>
+/> <?php _e('Home Owners','quotepro-insurance-widget') ?>
+
+<input type="checkbox" id="<?php echo $mexicoId; ?>"
+       name="<?php echo $mexicoName; ?>" value="1"
+       <?php echo $mexico; ?>
+/> <?php _e('Mexico','quotepro-insurance-widget') ?>
 </p>
